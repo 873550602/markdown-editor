@@ -4,7 +4,7 @@
 ```
 yarn add md-simple-editor --save
 // or
-npm install editor --save
+npm install md-simple-editor --save
 ```
 
 ### 使用

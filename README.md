@@ -2,14 +2,14 @@
 
 ## 安装
 ```
-yarn add markdown-editor --save
+yarn add md-simple-editor --save
 // or
 npm install editor --save
 ```
 
 ### 使用
 ```
-import {MarkdownViewer},MarkdownEditor from "markdown-editor"
+import {MarkdownViewer},MarkdownEditor from "md-simple-editor"
 import emoji from 'markdown-it-emoji'
 
 const plugins = [{

@@ -139,6 +139,7 @@
       <div v-if="isDrag" class="mask"></div>
       <div class="edit-content" :style="getEditorStyle">
         <textarea
+          :placeholder="placeholder"
           ref="textareaRef"
           class="editor"
           cols="30"
@@ -176,6 +177,9 @@ import {
 } from "./assets/javascript/index.js";
 export default {
   props: {
+    placeholder: {
+      type: String,
+    },
     isView: {
       type: Boolean,
       default: true,

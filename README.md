@@ -34,8 +34,3 @@ const plugins = [{
 |mdPlugins|array|[]|参考markdown-it插件使用|
 |mdOptions|object|{}|参考markdown-it配置|
       
-
-### Lints and fixes files
-```
-npm run lint
-```

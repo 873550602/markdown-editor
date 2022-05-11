@@ -2,10 +2,10 @@
   <div class="markdown-viewer" v-html="htmlContent"></div>
 </template>
 <script>
-import MarkdownIt from 'markdown-it';
-import hljs from 'highlight.js/lib/common';
-import './css/vs.css';
-import './css/markdown-it-custom.css';
+import MarkdownIt from "markdown-it";
+import hljs from "highlight.js/lib/common";
+import "./css/vs.css";
+import "./css/markdown-it-custom.css";
 let md;
 export default {
   props: {
@@ -29,21 +29,24 @@ export default {
         breaks: false,
         linkify: false,
         highlight: function (str, lang) {
+          if (!lang) lang = "js";
           if (lang && hljs.getLanguage(lang)) {
             try {
               return (
                 '<pre class="hljs"><code>' +
                 hljs.highlight(str, { language: lang, ignoreIllegals: true })
                   .value +
-                '</code></pre>'
+                "</code></pre>"
               );
-            } catch (__) {}
+            } catch (__) {
+              return "";
+            }
           }
 
           return (
             '<pre class="hljs"><code>' +
             md.utils.escapeHtml(str) +
-            '</code></pre>'
+            "</code></pre>"
           );
         },
       },
@@ -56,7 +59,8 @@ export default {
     },
   },
   created() {
-    this.md = md = new MarkdownIt(Object.assign(this.options_, this.options));
+    const options = Object.assign(this.options_, this.options);
+    this.md = md = new MarkdownIt(options);
     const plugins = [...this.plugins_, ...this.plugins];
     plugins.forEach((item) => this.md.use(item.plugin, item.options || {}));
   },

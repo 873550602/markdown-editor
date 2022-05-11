@@ -205,7 +205,7 @@ export default {
           plugin: taskList,
         },
       ],
-      mdOptions_: [],
+      mdOptions_: {},
       theme_: {
         primaryColor: "#2196f3",
         hoverColor: "#cccccc50",
@@ -421,7 +421,7 @@ export default {
     },
   },
   components: {
-    MarkdownViewer: () => import("@/components/markdown-viewer/index.vue"),
+    MarkdownViewer: () => import("../markdown-viewer/index.vue"),
   },
   created() {
     this.isView_ = this.isView;

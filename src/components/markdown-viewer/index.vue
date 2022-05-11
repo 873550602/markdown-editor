@@ -24,7 +24,7 @@ export default {
     return {
       md: null,
       options_: {
-        html: true,
+        html: false,
         xhtmlOut: false,
         breaks: false,
         linkify: false,

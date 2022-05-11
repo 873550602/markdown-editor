@@ -1,5 +1,7 @@
 # markdown-editor
 
+<img width="1462" alt="image" src="https://user-images.githubusercontent.com/35795645/167868438-7cefd3c5-5b71-40c9-86cc-41fafd90fd6b.png">
+
 ## 安装
 ```
 yarn add md-simple-editor --save

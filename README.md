@@ -1,24 +1,41 @@
 # markdown-editor
 
-## Project setup
+## 安装
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+yarn add markdown-editor --save
+// or
+npm install editor --save
 ```
 
-### Compiles and minifies for production
+### 使用
 ```
-npm run build
+import {MarkdownViewer},MarkdownEditor from "markdown-editor"
+import emoji from 'markdown-it-emoji'
+
+const plugins = [{
+  plugin:emoji,
+  option:{}
+}]
+<template>
+...
+<markdown-editor :mdOptions="{html:true}" :mdPlugins="plugins"></markdown-editor>
+<markdown-viewer :value="# hello world"></markdown-viewer>
+...
+</template>
 ```
+
+### markdownEditor props
+
+|Name|Type|Default|Description|
+|---|---|---|---|
+|isView|boolean|true|是否开启查看器|
+|splitLineRange|array|[10,90]|设置编辑器和查看器的分割线的移动范围|
+|theme|Object|{primaryColor: "#2196f3",hoverColor: "#cccccc50",activeColor: "#cccccc80",lineColor: "#CFD8DC",toolbarColor: "#ECEFF1",backgroundColor: "#ffffff"}|设置主题颜色|
+|mdPlugins|array|[]|参考markdown-it插件使用|
+|mdOptions|object|{}|参考markdown-it配置|
+      
 
 ### Lints and fixes files
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

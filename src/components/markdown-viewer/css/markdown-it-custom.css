@@ -1,0 +1,59 @@
+blockquote {
+    margin: 0px;
+    border-left: 3px solid #eeeeee;
+    padding-left: 5px;
+}
+
+table {
+    border: 1px solid #999999;
+    border-radius: 2px;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+td:not(:last-child),
+th:not(:last-child) {
+    border-right: 1px solid #999999;
+}
+
+th,
+td {
+    padding: 5px 20px;
+}
+
+tr:not(:last-child) td,
+th {
+    border-bottom: 1px solid #999999;
+}
+
+.contains-task-list li {
+    list-style: none;
+}
+
+input[type=checkbox] {
+    position: relative;
+}
+
+input[type=checkbox]:after{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: #ececec;
+    font-weight:bold;
+    display: block;
+    border-radius: 2px;
+}
+
+input[type=checkbox]:checked:disabled:after {
+    color: #2196f3;
+    line-height: 15px;
+    text-align: center;
+    font-size: 12px;
+    content: '\273b';
+    font-weight: bold;
+}

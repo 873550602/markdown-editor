@@ -38,3 +38,7 @@ const plugins = [{
 |mdPlugins|array|[]|参考markdown-it插件使用|
 |mdOptions|object|{}|参考markdown-it配置|
       
+### markdownEditor event
+|Name|params|Description|
+|---|---|---|
+|getContent|content:string，编辑器内容|点击保存后触发的事件|

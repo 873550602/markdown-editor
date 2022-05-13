@@ -391,7 +391,7 @@ export default {
       insertInline(this, this.$refs.textareaRef, inserArr);
     },
     save() {
-      this.$emit("getContent", this.contents);
+      this.$emit("getContent", this.content);
     },
     toggleFullScreen() {
       this.isFullScreen = !this.isFullScreen;

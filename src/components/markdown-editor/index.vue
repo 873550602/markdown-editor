@@ -145,6 +145,7 @@
           cols="30"
           rows="10"
           @scroll="editorBoxScroll"
+          @input="$emit('input', $event.target.value)"
           v-model="content"
         ></textarea>
       </div>
@@ -177,9 +178,8 @@ import {
 } from "./assets/javascript/index.js";
 export default {
   props: {
-    placeholder: {
-      type: String,
-    },
+    placeholder: String,
+    value: String,
     isView: {
       type: Boolean,
       default: true,
@@ -189,15 +189,9 @@ export default {
       type: Array,
       default: () => [10, 90],
     },
-    mdPlugins: {
-      type: Array,
-    },
-    mdOptions: {
-      type: Object,
-    },
-    theme: {
-      type: Object,
-    },
+    mdPlugins: Array,
+    mdOptions: Object,
+    theme: Object,
   },
   data() {
     return {
@@ -434,6 +428,8 @@ export default {
     this.initTheme();
     this.mergeConfig();
     this.setBoxWidth();
+    // 初始化content
+    this.content = this.value || "";
     // 监听用户粘贴事件，替换连接和图片内容
     this.$refs.textareaRef.addEventListener("paste", async (event) => {
       const linkReg = /^(http|https):\/\/.*/;

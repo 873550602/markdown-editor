@@ -30,6 +30,8 @@ const plugins = [{
 
 |Name|Type|Default|Description|
 |---|---|---|---|
+|v-model|string|无|双向绑定|
+|placeholder|string|无|提示信息|
 |isView|boolean|true|是否开启查看器|
 |splitLineRange|array|[10,90]|设置编辑器和查看器的分割线的移动范围|
 |theme|Object|{primaryColor: "#2196f3",hoverColor: "#cccccc50",activeColor: "#cccccc80",lineColor: "#CFD8DC",toolbarColor: "#ECEFF1",backgroundColor: "#ffffff"}|设置主题颜色|

@@ -1,12 +1,17 @@
 <template>
   <div id="app">
-    <markdown-editor></markdown-editor>
+    <markdown-editor v-model="content"></markdown-editor>
   </div>
 </template>
 
 <script>
 export default {
   name: "App",
+  data(){
+    return {
+      content:'# hello'
+    }
+  },
   components: {
     MarkdownEditor: () => import("@/components/markdown-editor/index.vue"),
   },

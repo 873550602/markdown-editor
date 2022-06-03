@@ -41,4 +41,6 @@ const plugins = [{
 ### markdownEditor event
 |Name|params|Description|
 |---|---|---|
-|getContent|content:string，编辑器内容|点击保存后触发的事件|
+|getContent|params<br> content:string  编辑器内容的|点击保存后触发事件|
+|focus|params<br>无|编辑器聚焦事件|
+|blur|params<br>无|编辑器失焦事件|

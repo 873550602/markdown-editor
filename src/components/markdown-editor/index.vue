@@ -144,6 +144,8 @@
           class="editor"
           cols="30"
           rows="10"
+          @focus="$emit('focus')"
+          @blur="$emit('blur')"
           @scroll="editorBoxScroll"
           @input="$emit('input', $event.target.value)"
           v-model="content"
